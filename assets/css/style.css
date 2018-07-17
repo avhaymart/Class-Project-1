@@ -42,13 +42,13 @@ nav {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
 }
 
 #hero-left,
 #hero-right {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 20px;
@@ -162,11 +162,15 @@ footer {
 
 @media only screen and (max-width: 991px) {
     #articles-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .card {
         width: 60%;
         height: auto;
+        margin-bottom: 30px;
     }
 
     .card img {
@@ -175,9 +179,27 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-    
+    .card {
+        width: 95%;
+    }
+
+    #hero-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero-left {
+        width: 90%;
+    }
+
+    #hero-right {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 479px) {
-    
+    #hero h1 {
+        font-size: 30px;
+    }
 }
