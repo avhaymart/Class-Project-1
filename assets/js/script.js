@@ -67,10 +67,11 @@ function drugSearch(search) {
 
 $("form").on("submit", function (e) {
     e.preventDefault();
-
     var drug = $("#userSearch").val().trim()
     drugSearch(drug);
 })
+
+
 
 var homeurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 homeurl += '?' + $.param({
@@ -84,7 +85,6 @@ $.ajax({
 }).then(function (e) {
     console.log(e);
 
-    for (var i = 0; i < 3; i++) {
         var headline1 = e.response.docs[0].headline.main;
         var snippet1 = e.response.docs[0].snippet;
         var nytLink1 = e.response.docs[0].web_url;
@@ -100,7 +100,21 @@ $.ajax({
         var nytLink3 = e.response.docs[2].web_url;
         $("#header-3").html(headline3);
         $("#para-3").html(snippet3)
+        
+        $("#card-1").on("click", function(e){
+            window.open(nytLink1, "_blank");
+            console.log("pee")
+        })
 
-    }
+        $("#card-2").on("click", function(r){
+            window.open(nytLink2, "_blank");
+            console.log("poo")
+        })
+        
+        $("#card-3").on("click", function(t){
+            window.open(nytLink3, "_blank");
+            console.log("turd")
+        })
+    
 
 })
