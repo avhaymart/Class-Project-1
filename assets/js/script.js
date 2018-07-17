@@ -86,6 +86,7 @@ $.ajax({
     console.log(e);
 
         var headline1 = e.response.docs[0].headline.main;
+        console.log(e.response);
         var snippet1 = e.response.docs[0].snippet;
         var nytLink1 = e.response.docs[0].web_url;
         $("#header-1").html(headline1);
@@ -103,18 +104,19 @@ $.ajax({
         
         $("#card-1").on("click", function(e){
             window.open(nytLink1, "_blank");
-            console.log("pee")
         })
 
         $("#card-2").on("click", function(r){
             window.open(nytLink2, "_blank");
-            console.log("poo")
         })
         
         $("#card-3").on("click", function(t){
             window.open(nytLink3, "_blank");
-            console.log("turd")
         })
     
 
+})
+
+$("#home-page").on("click", function(food){
+    window.location.href = "index.html"
 })
