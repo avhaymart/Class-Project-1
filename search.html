@@ -6,19 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drugs and Info</title>
-    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
+
+    <div class="wrapper">
+        <nav>
+            <div id="nav-container">
+                <div id="nav-left">
+                    <h2>Drugs and Info</h2>
+                </div>
+                <div id="nav-right">
+                    <ul>
+                        <li>
+                            <a href="#">A-Z list</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="hero">
+            <div id="hero-container">
+                <div id="hero-left">
+                    <h1>Have questions about a medication?</h1>
+                    <p>Look it up here.</p>
+                    <!-- search -->
+                    <div id="formDiv">
+                        <form action="submit">
+                            <input id="userSearch" type="text" placeholder="Ibuprofin" autocomplete="off">
+                            <button id="searchBtn">Search</button>
+                            <!-- <div id="icon"><a href="#"><i class="material-icons">search</i></a></span> -->
+                        </form>
+                    </div>
+                </div>
+                <div id="hero-right">
+                    <img src="assets/img/pill.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="articles">
+            <div id="articles-container" class="wrap">
+                <h3>New York Times Articles</h3>
+                <div id="articles-wrap">
+                    <div id="card-1" class="card">
+                        <h4>The Best Medicine</h4>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aperiam placeat deserunt numquam
+                            necessitatibus et beatae ipsa repellat! Blanditiis, voluptatum! Quaerat odio velit nam distinctio
+                            accusamus molestiae architecto asperiores consequatur.</p>
+
+                    </div>
+                    <div id="card-2" class="card">
+                        <h4>The Best Medicine</h4>
+                        <p>The Best Medicine Available</p>
+                    </div>
+                    <div id="card-3" class="card">
+                        <h4>The Best Medicine</h4>
+                        <p>The Best Medicine Available</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <!-- <div class="wrap"> -->
+            <p>© 2018, Drugs and Info</p>
+            <!-- </div> -->
+        </footer>
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="assets/js/style.js"></script>
     <script src="assets/js/script.js"></script>
 

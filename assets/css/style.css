@@ -15,7 +15,7 @@ nav {
 #nav-container {
     width: 80%;
     margin: auto;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
 }
@@ -25,10 +25,40 @@ nav {
     color: #eee;
 }
 
+#nav-right {
+    height: 100%;
+}
+
 #nav-right ul {
     list-style: none;
     color: #eee;
     font-weight: 400;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#nav-right li {
+    transition: background-color 0.1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-right li:hover {
+    background-color: #313131;
+    cursor: pointer;
+}
+
+#nav-right li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    min-width: 100px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
 }
 
 #hero {
@@ -40,15 +70,15 @@ nav {
     min-height: 500px;
     width: 80%;
     margin: auto;
-    display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
+    display: none;
 }
 
 #hero-left,
 #hero-right {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 20px;
@@ -74,6 +104,7 @@ nav {
 }
 
 #formDiv input {
+    margin: 0;
     padding: 10px 25px;
     background-color: rgb(255, 255, 255);
     border: 1px solid #d8d8d8;
@@ -90,14 +121,37 @@ nav {
 }
 
 #formDiv input:hover {
-    box-shadow: 4px 4px 20px 0px #9f9f9f;
+    box-shadow: 0px 0px 10px 0px #9f9f9f;
 }
 
 #formDiv input::placeholder {
     opacity: 0.7;
 }
 
+#formDiv button {
+    margin: 10px 0 0 4px;
+    padding: 10px 25px;
+    background-color: #88C5CC;
+    border: 1px solid #d8d8d8;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #79b0b6;
+    border-radius: 8px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+#formDiv button:hover {
+    cursor: pointer;
+    outline: none;
+    background-color: #79b0b6;
+}
+
+#formDiv button:focus {
+    outline: none;
+}
+
 #articles {
+    border-top: 2px solid #c7c7c7;
     background-color: #88C5CC;
     min-height: 350px;
     padding: 70px 0;
@@ -109,12 +163,17 @@ nav {
     text-align: center;
 }
 
+#articles-container {
+    display:none;
+}
+
 #articles h3 {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 36px;
     text-align: center;
     margin: 0 0 50px 0;
+    color: #fff;
 }
 
 #articles-wrap {
@@ -127,21 +186,21 @@ nav {
     margin: 10px 15px;
     width: 25%;
     height: 350px;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    background-color: white;
-    box-shadow: 4px 4px 15px 0px #757575;
-    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #a8a8a8;
+    border-radius: 8px;
     overflow: hidden;
     transition: box-shadow 0.1s ease-in-out;
-
 }
 
 .card:hover {
-    box-shadow: 6px 6px 20px 0px #757575;
+    box-shadow: 0px 0px 10px 0px #616161;
+    cursor: pointer;
 }
 
 .card img {
@@ -162,22 +221,39 @@ footer {
 
 @media only screen and (max-width: 991px) {
     #articles-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
     .card {
         width: 60%;
         height: auto;
+        margin-bottom: 30px;
     }
-
     .card img {
         max-height: 150px;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    
+    .card {
+        width: 95%;
+    }
+    #hero-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #hero-left {
+        width: 90%;
+    }
+    #hero-right {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 479px) {
-    
+    #hero h1 {
+        font-size: 30px;
+    }
 }
