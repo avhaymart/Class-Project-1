@@ -22,30 +22,30 @@ var genName;
 var purpose;
 var warnings;
 var whenUse;
-var $resBrand
-var $resGen
-var $resReaction
-var $resReactiondDiv
-var shortReac
-var joinReac
-var $resAbuse
-var $resAbuseDiv
-var shortAbuse
-var joinAbuse
-var $precaution
-var $precautionDiv
-var shortPrec
-var joinPrec
-var $resDir
-var $resDirDiv
-var $resPurpose
-var $resPurposeDiv
-var $resWhenUse
-var $resWhenUseDiv
-var $resWarnings
-var $resWarningsDiv
-var shortWarnings
-var joinWarnings
+var $resBrand;
+var $resGen;
+var $resReaction;
+var $resReactiondDiv;
+var shortReac;
+var joinReac;
+var $resAbuse;
+var $resAbuseDiv;
+var shortAbuse;
+var joinAbuse;
+var $precaution;
+var $precautionDiv;
+var shortPrec;
+var joinPrec;
+var $resDir;
+var $resDirDiv;
+var $resPurpose;
+var $resPurposeDiv;
+var $resWhenUse;
+var $resWhenUseDiv;
+var $resWarnings;
+var $resWarningsDiv;
+var shortWarnings;
+var joinWarnings;
 $( document ).ready(function() {
     var drugName= localStorage.getItem("search");
     
@@ -95,7 +95,17 @@ $("#searchBtn").on("click", function(click){
                 $resReactionDiv.addClass("resultSideEffect");
                 shortReac = reactions.split(" ", 50);
                 joinReac = shortReac.join(" ");
-                $resReactionDiv.text(joinReac);
+                longReac = reactions.split(" ", 200);
+                longJoinReac = longReac.join(" ");
+                $resReactionDiv.html(joinReac + " " + "<a href='' id='recMore-btn'>read more</a>");
+                $(document).on("click", "#recMore-btn",function(e){
+                    e.preventDefault()
+                    $resReactionDiv.html(longJoinReac + " " + "<a href='' id='recLess-btn'>read less</a>") 
+                }); 
+                $(document).on("click", "#recLess-btn",function(e){
+                    e.preventDefault()
+                    $resReactionDiv.html(joinReac + " " + "<a href='' id='recMore-btn'>read more</a>") 
+                }); 
                 $acord.append($resReaction);
                 $acord.append($resReactionDiv);
             }
@@ -107,7 +117,17 @@ $("#searchBtn").on("click", function(click){
                 $resAbuseDiv.addClass("resultsPrecautions");
                 shortAbuse = drugAbuse.split(" ", 50);
                 joinAbuse= shortAbuse.join(" ");
-                $resAbuseDiv.text(joinAbuse);
+                longAbuse = drugAbuse.split(" ", 200);
+                longJoinAbuse = longAbuse.join(" ");
+                $resAbuseDiv.html(joinAbuse + " " + "<a href='' id='abuseMore-btn'>read more</a>");
+                $(document).on("click", "#abuseMore-btn",function(e){
+                    e.preventDefault()
+                    $resAbuseDiv.html(longJoinAbuse + " " + "<a href='' id='abuseLess-btn'>read less</a>") 
+                }); 
+                $(document).on("click", "#abuseLess-btn",function(e){
+                    e.preventDefault()
+                    $resAbuseDiv.html(joinAbuse + " " + "<a href='' id='abuseMore-btn'>read more</a>") 
+                }); 
                 $acord.append($resAbuse);
                 $acord.append($resAbuseDiv);
             }
@@ -119,7 +139,17 @@ $("#searchBtn").on("click", function(click){
                 $precautionDiv.addClass("resultReactions");
                 shortPrec = precautions.split(" ", 50);
                 joinPrec = shortPrec.join(" ");
-                $precautionDiv.text(joinPrec);
+                longPrec = precautions.split(" ", 200);
+                longJoinPrec = longPrec.join(" ");
+                $precautionDiv.html(joinPrec + " " + "<a href='' id='precMore-btn'>read more</a>");
+                $(document).on("click", "#precMore-btn",function(e){
+                    e.preventDefault()
+                    $precautionDiv.html(longJoinPrec + " " + "<a href='' id='precLess-btn'>read less</a>") 
+                }); 
+                $(document).on("click", "#precLess-btn",function(e){
+                    e.preventDefault()
+                    $precautionDiv.html(joinPrec + " " + "<a href='' id='precMore-btn'>read more</a>") 
+                }); 
                 $acord.append($precaution);
                 $acord.append($precautionDiv);
             }
@@ -151,7 +181,17 @@ $("#searchBtn").on("click", function(click){
                 $resWarningsDiv.addClass("resultDirections")
                 shortWarnings = warnings.split(" ", 50);
                 joinWarnings = shortWarnings.join(" ");
-                $resWarningsDiv.text(joinWarnings);
+                longWarnings = warnings.split(" ", 200);
+                longJoinWarnings = longWarnings.join(" ");
+                $resWarningsDiv.html(joinWarnings + " " + "<a href='' id='warnMore-btn'>read more</a>");
+                $(document).on("click", "#warnMore-btn",function(e){
+                    e.preventDefault()
+                    $resWarningsDiv.html(longJoinWarnings + " " + "<a href='' id='warnLess-btn'>read less</a>") 
+                }); 
+                $(document).on("click", "#warnLess-btn",function(e){
+                    e.preventDefault()
+                    $resWarningsDiv.html(joinWarnings + " " + "<a href='' id='warnMore-btn'>read more</a>") 
+                }); 
                 $acord.append($resWarnings);
                 $acord.append($resWarningsDiv);
             }
@@ -175,6 +215,8 @@ $("#searchBtn").on("click", function(click){
 
             $("#searchResults").prepend($result);
             $(".accordion").accordion();
+
+            
         })
         
     }
