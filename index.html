@@ -21,10 +21,29 @@
                 <div id="nav-right">
                     <ul>
                         <li>
-                            <a href="#">A-Z list</a>
+                            <a id="contactLink" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
+
+            </div>
+            <div id="contact">
+                <div id="contact-container">
+                    <form id="contactForm" action="submit" autocomplete="off">
+                        <p>Name</p>
+                        <input id="userName" type="text" placeholder="John Doe" autocomplete="off">
+                        <p>Email</p>
+                        <input id="userEmail" type="text" placeholder="example@email.com" autocomplete="off">
+                        <p>Message</p>
+                        <textarea id="userMessage" type="text" placeholder="Message..." autocomplete="off"></textarea>
+                        <br>
+                        <button id="submitBtn">Send Message</button>
+
+                    </form>
+
+                </div>
+                <p id="thanks">Thanks!</p>
+
             </div>
         </nav>
         <section id="hero">
@@ -34,7 +53,7 @@
                     <p>Look it up here.</p>
                     <!-- search -->
                     <div id="formDiv">
-                        <form action="submit">
+                        <form id="searchForm" action="submit">
                             <input id="userSearch" type="text" placeholder="Ibuprofen" autocomplete="off">
                             <button id="searchBtn">Search</button>
                             <!-- <div id="icon"><a href="#"><i class="material-icons">search</i></a></span> -->
