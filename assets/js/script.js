@@ -20,7 +20,7 @@ var snippet3;
 var nytLink3;
 
  
-    $("#searchForm").on("submit", function (e) {
+    $("#search-form").on("submit", function (e) {
         e.preventDefault();
         var drug = $("#userSearch").val().trim()
         localStorage.clear();
