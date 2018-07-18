@@ -170,6 +170,10 @@ nav {
     font-weight: 400;
 }
 
+.accordion .ui-accordion-content {
+    max-height: 200px;
+}
+
 footer,
 .push {
     height: 70px;
@@ -183,4 +187,29 @@ footer {
     align-items: center;
     justify-content: center;
     color: rgb(146, 146, 146);
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+    #formDiv form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #formDiv form input {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    #formDiv form button {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
 }
