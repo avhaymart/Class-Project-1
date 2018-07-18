@@ -59,16 +59,15 @@ $("#searchBtn").on("click", function(click){
     localStorage.setItem("search", newSearch);
     var newDrugName = localStorage.getItem("search")
     drugSearch(newDrugName);
+    $("#userSearch:text").val("");
 });
 
     function drugSearch(search) {
         var fdaurl = "https://api.fda.gov/drug/label.json?search=openfda.brand_name:(" + search + ")&limit=1&skip=0?key=" + key;
-        
         $.ajax({
             url: fdaurl,
             method: 'GET',
         }).then(function (res) {
-
             var $result = $("<div>");
             $result.addClass("result");
             

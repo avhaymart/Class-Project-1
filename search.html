@@ -10,9 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/jqueryUi.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/styleSearch.css">
 
 </head>
+
 <body>
     <div class="wrapper">
         <nav>
@@ -23,16 +25,34 @@
                 <div id="nav-right">
                     <ul>
                         <li>
-                            <a href="#">A-Z list</a>
+                            <a id="contactLink" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div id="contact">
+                <div id="contact-container">
+                    <form id="contactForm" action="submit" autocomplete="off">
+                        <p>Name</p>
+                        <input id="userName" type="text" placeholder="John Doe" autocomplete="off">
+                        <p>Email</p>
+                        <input id="userEmail" type="text" placeholder="example@email.com" autocomplete="off">
+                        <p>Message</p>
+                        <textarea id="userMessage" type="text" placeholder="Message..." autocomplete="off"></textarea>
+                        <br>
+                        <button id="submitBtn">Send Message</button>
+
+                    </form>
+
+                </div>
+                <p id="thanks">Thanks!</p>
+
             </div>
         </nav>
         <section id="search-section">
             <div id="search-section-container">
                 <div id="formDiv">
-                    <form action="submit">
+                    <form id="search-page" action="submit">
                         <input id="userSearch" type="text" placeholder="Ibuprofen" autocomplete="off">
                         <button id="searchBtn">Search</button>
                     </form>
