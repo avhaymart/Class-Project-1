@@ -19,12 +19,7 @@ var headline3;
 var snippet3;
 var nytLink3;
 
-
-
-        
-
-    
-    
+ 
     $("form").on("submit", function (e) {
         e.preventDefault();
         var drug = $("#userSearch").val().trim()
@@ -65,18 +60,19 @@ var nytLink3;
             
             $("#card-1").on("click", function(e){
                 window.open(nytLink1, "_blank");
-                console.log("pee")
             })
             
             $("#card-2").on("click", function(r){
                 window.open(nytLink2, "_blank");
-                console.log("poo")
             })
             
             $("#card-3").on("click", function(t){
                 window.open(nytLink3, "_blank");
-                console.log("turd")
             })
             
             
+        })
+
+        $("#nav-left").on("click", function(){
+            document.location.href = "index.html"
         })
