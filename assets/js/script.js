@@ -57,6 +57,21 @@ var nytLink3;
             var nytLink3 = e.response.docs[2].web_url;
             $("#header-3").html(headline3);
             $("#para-3").html(snippet3)
+            var headline4 = e.response.docs[3].headline.main;
+            var snippet4 = e.response.docs[3].snippet;
+            var nytLink4 = e.response.docs[3].web_url;
+            $("#header-4").html(headline4);
+            $("#para-4").html(snippet4)
+            var headline5 = e.response.docs[4].headline.main;
+            var snippet5 = e.response.docs[4].snippet;
+            var nytLink5 = e.response.docs[4].web_url;
+            $("#header-5").html(headline5);
+            $("#para-5").html(snippet5)
+            var headline6 = e.response.docs[5].headline.main;
+            var snippet6 = e.response.docs[5].snippet;
+            var nytLink6 = e.response.docs[5].web_url;
+            $("#header-6").html(headline6);
+            $("#para-6").html(snippet6)
             
             $("#card-1").on("click", function(e){
                 window.open(nytLink1, "_blank");
@@ -70,6 +85,16 @@ var nytLink3;
                 window.open(nytLink3, "_blank");
             })
             
+            $("#card-4").on("click", function(t){
+                window.open(nytLink4, "_blank");
+            })
+            
+            $("#card-5").on("click", function(t){
+                window.open(nytLink5, "_blank");
+            })
+            $("#card-6").on("click", function(t){
+                window.open(nytLink6, "_blank");
+            })
             
         })
 
