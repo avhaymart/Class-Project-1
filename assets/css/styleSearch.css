@@ -189,9 +189,6 @@ footer {
     color: rgb(146, 146, 146);
 }
 
-@media only screen and (max-width: 991px) {
-}
-
 @media only screen and (max-width: 767px) {
     #formDiv form {
         display: flex;
@@ -209,7 +206,4 @@ footer {
         margin: 10px 0;
         width: 100%;
     }
-}
-
-@media only screen and (max-width: 479px) {
 }
