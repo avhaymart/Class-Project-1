@@ -178,7 +178,3 @@ $("#searchBtn").on("click", function(click){
         })
         
     }
-
-    $("#nav-left").on("click", function(){
-        document.location.href = "index.html"
-    })
