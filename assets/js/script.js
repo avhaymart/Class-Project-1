@@ -41,6 +41,8 @@ var nytLink3;
             method: 'GET',
         }).then(function (e) {
             console.log(e);
+            $(".cardContent").show();
+            $(".loadingCard").hide();
             
             var headline1 = e.response.docs[0].headline.main;
             var snippet1 = e.response.docs[0].snippet;

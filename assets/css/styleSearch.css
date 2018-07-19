@@ -150,6 +150,17 @@ nav {
     outline: none;
 }
 
+#searchResults {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.loadingSearch {
+    
+}
+
 .result {
     background-color: #fff;
     border: 1px solid #d8d8d8;

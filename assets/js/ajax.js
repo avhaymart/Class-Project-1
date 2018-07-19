@@ -243,18 +243,14 @@ function drugSearch(search) {
         $result.append($resultHeading);
         // appends accordion to result div 
         $result.append($acord);
-
+        $(".loadingSearch").hide();
         // prepends the result div to the main content page
         $("#searchResults").prepend($result);
         // creates functionallity of accordion
         $(".accordion").accordion();
-
-
-    })
-
-}
-
+        });
+    }
 // on click for drug and info text in nav bar to return to home page
 $("#nav-left").on("click", function () {
     document.location.href = "index.html"
-})
+});
