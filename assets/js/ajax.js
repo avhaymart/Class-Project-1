@@ -80,7 +80,7 @@ $("#searchBtn").on("click", function(click){
             if(res.results[0].openfda.brand_name && res.results[0].openfda.generic_name){
                 brandName = res.results[0].openfda.brand_name[0];
                 genericName = res.results[0].openfda.generic_name[0];
-                genName = (brandName + "(" + genericName + ")");
+                genName = (brandName + " (" + genericName + ")");
                 console.log(brandName)
                 $resBrand = $("<span>");
                 $resBrand.addClass("resultBrand");
