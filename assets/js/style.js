@@ -28,12 +28,12 @@ $(document).ready(function () {
     $("#contactForm").on("submit", function (e) {
         e.preventDefault();
 
-        if ($("#userMessage").val() === "") {
-            $("#userMessage").effect("shake");
-        } else if ($("#userName").val() === "") {
+        if ($("#userName").val() === "") {
             $("#userName").effect("shake");
         } else if ($("#userEmail").val() === "") {
             $("#userEmail").effect("shake");
+        } else if ($("#userMessage").val() === "") {
+            $("#userMessage").effect("shake");
         } else {
             $("#contact-container").fadeOut();
             $("#thanks").fadeIn();

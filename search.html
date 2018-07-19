@@ -34,14 +34,13 @@
                 <div id="contact-container">
                     <form id="contactForm" action="submit" autocomplete="off">
                         <p>Name</p>
-                        <input id="userName" type="text" placeholder="John Doe" autocomplete="off">
+                        <input id="userName" type="text" name="name" placeholder="John Doe" autocomplete="off">
                         <p>Email</p>
-                        <input id="userEmail" type="text" placeholder="example@email.com" autocomplete="off">
+                        <input id="userEmail" type="email" name="email" placeholder="example@email.com" autocomplete="off">
                         <p>Message</p>
-                        <textarea id="userMessage" type="text" placeholder="Message..." autocomplete="off"></textarea>
+                        <textarea id="userMessage" type="text" name="message" placeholder="Message..." autocomplete="off"></textarea>
                         <br>
                         <button id="submitBtn">Send Message</button>
-
                     </form>
 
                 </div>
@@ -60,7 +59,7 @@
                 <h3 id="ResultH3">Search Results:</h3>
                 <span id="failResult"></span>
                 <div id="searchResults">
-                        <img class="loadingSearch" src="assets/img/oval.svg" alt="loading">
+                    <img class="loadingSearch" src="assets/img/oval.svg" alt="loading">
                     <!-- <div class="result">
                         <h3 class="resultHeading">
                             <span class="resultBrand">Heroin </span>(<span class="resultGeneric">Generic Name</span>)</h3>
