@@ -30,11 +30,11 @@
                 <div id="contact-container">
                     <form id="contactForm" action="submit" autocomplete="off">
                         <p>Name</p>
-                        <input id="userName" type="text" placeholder="John Doe" autocomplete="off">
+                        <input id="userName" type="text" name="name" placeholder="John Doe" autocomplete="off">
                         <p>Email</p>
-                        <input id="userEmail" type="text" placeholder="example@email.com" autocomplete="off">
+                        <input id="userEmail" type="email" name="email" placeholder="example@email.com" autocomplete="off">
                         <p>Message</p>
-                        <textarea id="userMessage" type="text" placeholder="Message..." autocomplete="off"></textarea>
+                        <textarea id="userMessage" type="text" name="message" placeholder="Message..." autocomplete="off"></textarea>
                         <br>
                         <button id="submitBtn">Send Message</button>
                     </form>
@@ -107,6 +107,8 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
     <script src="assets/js/style.js"></script>
     <script src="assets/js/script.js"></script>

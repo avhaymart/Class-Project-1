@@ -13,7 +13,7 @@ $(document).ready(function () {
     $("#contact").css("height", "0px");
     $("#contact").show();
 
-    $("#contactLink").on("click", function(){
+    $("#contactLink").on("click", function () {
         if ($("#contact").height() === contactHeight) {
             $("#contact").animate({
                 height: 0
@@ -25,21 +25,31 @@ $(document).ready(function () {
         }
     });
 
-    $("#contactForm").on("submit", function(e){
+    $("#contactForm").on("submit", function (e) {
         e.preventDefault();
-        $("#contact-container").fadeOut();
-        $("#thanks").fadeIn();
-        $("#contact").animate({
-            height:55,
-        });
-        setTimeout(function(){
-            $("#thanks").fadeOut();
+
+        if ($("#userMessage").val() === "") {
+            $("#userMessage").effect("shake");
+        } else if ($("#userName").val() === "") {
+            $("#userName").effect("shake");
+        } else if ($("#userEmail").val() === "") {
+            $("#userEmail").effect("shake");
+        } else {
+            $("#contact-container").fadeOut();
+            $("#thanks").fadeIn();
             $("#contact").animate({
-                height:0
+                height: 55,
             });
-        }, 1500);
-        setTimeout(function(){
-            $("#contact-container").show();
-        }, 2000);
+            setTimeout(function () {
+                $("#thanks").fadeOut();
+                $("#contact").animate({
+                    height: 0
+                });
+            }, 1500);
+            setTimeout(function () {
+                $("#contact-container").show();
+            }, 2000);
+        }
+
     });
 });
