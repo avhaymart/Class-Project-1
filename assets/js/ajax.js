@@ -52,7 +52,7 @@ var joinWarnings;
 // runs ajax call on page load
 $(document).ready(function () {
     var drugName = localStorage.getItem("search");
-
+    $("#failResult").html("<p>" + "That search did not match any FDA drug please try again" + "</p>").show()
     drugSearch(drugName);
 });
 
@@ -61,6 +61,7 @@ $("#searchBtn").on("click", function (click) {
     click.preventDefault();
     localStorage.clear();
     var newSearch = $("#userSearch").val();
+    $("#failResult").html("<p>" + "That search did not match any FDA drug please try again" + "</p>").show()
     localStorage.setItem("search", newSearch);
     var newDrugName = localStorage.getItem("search")
     drugSearch(newDrugName);
@@ -244,6 +245,7 @@ function drugSearch(search) {
         // appends accordion to result div 
         $result.append($acord);
         $(".loadingSearch").hide();
+        $("#failResult").hide()
         // prepends the result div to the main content page
         $("#searchResults").prepend($result);
         // creates functionallity of accordion
