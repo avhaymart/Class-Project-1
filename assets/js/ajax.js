@@ -53,6 +53,7 @@ var joinWarnings;
 $(document).ready(function () {
     var drugName = localStorage.getItem("search");
     $("#failResult").html("<p>" + "That search did not match any FDA drug. Please try again." + "</p>").show()
+    $(".loadingSearch").hide()
     drugSearch(drugName);
 });
 
