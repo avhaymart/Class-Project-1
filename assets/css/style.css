@@ -241,7 +241,12 @@ nav {
     transition: box-shadow 0.1s ease-in-out;
     width: 60%;
     height: auto;
+    min-height: 100px;
     margin: 25px auto;
+}
+
+.cardContent {
+    display: none;
 }
 
 .card:hover {
