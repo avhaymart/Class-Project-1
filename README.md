@@ -6,7 +6,7 @@
    * Dominic Griffis
 
 * Project Description
-   * Drugs and Info is be a mobile-friendly, modern website that allows users to search for prescription and over-the-counter drugs. Our basic functionality as of right now is to list the drug name, description, and possible side effects. The front page also displays popular New York Times articles related to these drugs.
+   * Drugs and Info is a mobile-friendly, modern website that allows users to search for prescription and over-the-counter drugs. Our basic functionality as of right now is to list the drug name, description, and possible side effects. The front page also displays popular New York Times articles related to these drugs.
 * APIs Used
   * New York Times API
   * OpenFDA API
