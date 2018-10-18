@@ -1,5 +1,7 @@
 # Project Drugs and Info
 
+![Drugs and Info](https://image.ibb.co/d61eAf/Screenshot-from-2018-10-18-10-08-18.png)
+
 * Team Members
    * Avonlea Haymart
    * Noah Neighbours
