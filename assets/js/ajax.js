@@ -72,7 +72,8 @@ $("#searchBtn").on("click", function (click) {
 // ajax call wrapped in function to be called by onclicks and document.ready function
 function drugSearch(search) {
     //definition of api url with changable values to refine searches
-    var fdaurl = "https://api.fda.gov/drug/label.json?search=openfda.brand_name:(" + search + ")&limit=1&skip=0?key=" + key;
+    var fdaurl = "https://api.fda.gov/drug/label.json?search=openfda.brand_name:(" + search + ")&limit=1&skip=0";
+    console.log(fdaurl)
     $.ajax({
         url: fdaurl,
         method: 'GET',
