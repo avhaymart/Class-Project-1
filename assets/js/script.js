@@ -33,9 +33,10 @@ $("#search-form").on("submit", function (e) {
 var homeurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 homeurl += '?' + $.param({
     'api-key': "74cc9f75faa54dd68a9249b2d0fe62e1",
-    'fq': "headline.search:" + "medicine",
+    'fq': "medicine",
     'sort': "newest"
 });
+console.log(homeurl)
 $.ajax({
     url: homeurl,
     method: 'GET',
@@ -94,7 +95,7 @@ $.ajax({
 var healthurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 healthurl += '?' + $.param({
     'api-key': "29682e6e1b2e47189cfaa9a29501b31a",
-    'fq': "headline.search:" + "health",
+    'fq': "health",
     'sort': "newest"
 });
 $.ajax({
