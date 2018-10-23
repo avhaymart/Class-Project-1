@@ -15,3 +15,6 @@
 * Rough Breakdown of Tasks
   * Phase one was to make the website with basic functionality. Avonlea Haymart had focus on the website design and front-end development. Noah Neighbours and Dominic Griffis had focus on back-end development and API usage. We all collectively did API research and build the connection between front-end and back-end. This included checking code for bugs and monitoring its efficiency.
 Phase two was adding more functionality, such as an A-Z list of drugs, and allow for the user to save drugs and pin articles.
+* Running the Code
+  * Clone the git repository into a directory of your choice. ```git clone https://github.com/avhaymart/Class-Project-1.git```
+  * In the root of the directory, open ```index.html```.
