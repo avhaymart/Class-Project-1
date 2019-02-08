@@ -32,7 +32,7 @@ $("#search-form").on("submit", function (e) {
 //definition of api url
 var homeurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 homeurl += '?' + $.param({
-    'api-key': "74cc9f75faa54dd68a9249b2d0fe62e1",
+    'api-key': "h67b5fzMGOCDBG5GlOot0ojYn5KH0xMa",
     'fq': "medicine",
     'sort': "newest"
 });
@@ -94,7 +94,7 @@ $.ajax({
 //definition of api url
 var healthurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 healthurl += '?' + $.param({
-    'api-key': "29682e6e1b2e47189cfaa9a29501b31a",
+    'api-key': "h67b5fzMGOCDBG5GlOot0ojYn5KH0xMa",
     'fq': "health",
     'sort': "newest"
 });
